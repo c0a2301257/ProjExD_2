@@ -42,7 +42,6 @@ def gameover(screen, kk_rct):
     cryrct= cry.get_rect(center=kk_rct.center)
     cry2= pg.transform.rotozoom(pg.image.load("fig/8.png"), 0, 2.0)
     cryrct2= cry.get_rect(center=(WIDTH-kk_rct[0],HEIGHT-kk_rct[1]))#対角線にこうかとんが位置する
-
     screen.blit(black,(0,0))
     screen.blit(cry,cryrct)
     screen.blit(cry2,cryrct2)
