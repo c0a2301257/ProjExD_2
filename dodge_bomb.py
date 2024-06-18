@@ -29,6 +29,7 @@ for r in range(1, 11):
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
+
 def gameover(screen, kk_rct):
 
     font = pg.font.Font(None, 100)
@@ -39,9 +40,12 @@ def gameover(screen, kk_rct):
     black.fill((0,0,0))
     cry= pg.transform.rotozoom(pg.image.load("fig/8.png"), 0, 2.0)
     cryrct= cry.get_rect(center=kk_rct.center)
+    cry2= pg.transform.rotozoom(pg.image.load("fig/8.png"), 0, 2.0)
+    cryrct2= cry.get_rect(center=(WIDTH-kk_rct[0],HEIGHT-kk_rct[1]))#対角線にこうかとんが位置する
 
     screen.blit(black,(0,0))
     screen.blit(cry,cryrct)
+    screen.blit(cry2,cryrct2)
     screen.blit(text,text_rect)
     pg.display.update()#画面の更新
     pg.time.wait(5000)#これで５秒間表示
